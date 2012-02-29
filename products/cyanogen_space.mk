@@ -1,11 +1,11 @@
+# Inherit device configuration for Odys Space
+$(call inherit-product, device/odys/space/device_space.mk)
+
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/cyanogen/products/common_full.mk)
 
 # Include GSM stuff
 $(call inherit-product, vendor/cyanogen/products/gsm.mk)
-
-# Inherit device configuration for Odys Space
-$(call inherit-product, device/odys/space/device_space.mk)
 
 #
 # Setup device specific product configuration.
@@ -17,8 +17,8 @@ PRODUCT_MODEL := Space
 PRODUCT_MANUFACTURER := Odys
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=space BUILD_ID=2012-02 BUILD_FINGERPRINT=space:2.3.7/2012-02/release-keys PRIVATE_BUILD_DESC="Add desc. here"
 
-PRODUCT_PACKAGE_OVERLAYS += \
-	vendor/cyanogen/overlay/tablet
+# PRODUCT_PACKAGE_OVERLAYS += \
+# 	vendor/cyanogen/overlay/tablet
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := Space
